@@ -8,11 +8,293 @@ body {
 }
 
 .container {
+  /* width: 50rem; */
+
   display: grid;
+  grid-gap: 0.5em;
+
   border-radius: 5px;
   background: linear-gradient(
     180deg,
     rgba(119, 170, 181, 0.337) 0%,
     rgba(91, 105, 50, 0) 100%
   );
+
+  z-index: 10;
+  backdrop-filter: blur(5px);
+
+  width: 350px;
+
+  margin: 300px;
+  padding: 30px;
+
+  grid-template-areas:
+    "main main main main"
+    "itemC itemPower itemAC itemOff "
+    "item7 item8 item9 itemDivide"
+    "item4 item5 item6 itemMinus"
+    "item1 item2 item3 itemPlus"
+    "item0 itemDot itemMulti itemEquals";
+}
+
+.main {
+  height: 50px;
+  font-size: 30px;
+
+  grid-area: main;
+}
+.container > div {
+  cursor: pointer;
+  border-radius: 10px;
+  background: #afe4ef;
+}
+.container > div:hover {
+  cursor: pointer;
+  background: rgb(153, 57, 57);
+  color: white;
+}
+
+.item-1 {
+  height: 7vh;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: item1;
+}
+
+.item-2 {
+  height: 7vh;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: item2;
+}
+.item-3 {
+  height: 7vh;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: item3;
+}
+.item-4 {
+  height: 7vh;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: item4;
+}
+.item-5 {
+  height: 7vh;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: item5;
+}
+.item-6 {
+  height: 7vh;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: item6;
+}
+.item-7 {
+  height: 7vh;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: item7;
+}
+.item-8 {
+  height: 7vh;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: item8;
+}
+.item-9 {
+  height: 7vh;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: item9;
+}
+.item-10 {
+  height: 7vh;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: item0;
+}
+.item-11 {
+  height: 7vh;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: itemPlus;
+}
+.item-12 {
+  height: 7vh;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: itemMulti;
+}
+.item-13 {
+  height: 7vh;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: itemMinus;
+}
+.item-14 {
+  height: 7vh;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: itemDivide;
+}
+.item-15 {
+  height: 7vh;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: itemOff;
+}
+.item-16 {
+  height: 7vh;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: itemC;
+}
+.item-17 {
+  height: 7vh;
+  /* background: rgba(166, 244, 159, 1); */
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: itemDot;
+}
+
+.item-18 {
+  height: 7vh;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: itemAC;
+}
+.item-19 {
+  height: 7vh;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: itemEquals;
+}
+.item-20 {
+  height: 7vh;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: itemPower;
+}
+
+.container > div:active {
+  box-shadow: #afe4ef;
+  transform: translateY(4px);
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
 }
