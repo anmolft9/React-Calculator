@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(107, 64, 64, 0.63) 0%,
+    rgba(91, 105, 50, 0) 100%
+  );
+}
+
+.container {
+  display: grid;
+  border-radius: 5px;
+  background: linear-gradient(
+    180deg,
+    rgba(119, 170, 181, 0.337) 0%,
+    rgba(91, 105, 50, 0) 100%
+  );
+}
