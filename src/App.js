@@ -2,9 +2,11 @@ import { useState } from "react";
 import "./App.css";
 import { ButtonArea } from "./components/ButtonArea";
 import { Display } from "./components/Display";
+const operators = ["+", "-", "*", "/"];
 
 function App() {
   const [str, setStr] = useState("");
+
   const handleOnClick = (value) => {
     if (value === "AC") {
       setStr("");
@@ -18,6 +20,15 @@ function App() {
     if (value === "=") {
       const total = eval(str);
       return setStr(total);
+    }
+
+    if (operators.includes(value)) {
+      const lastChar = str.slice(-1);
+      if (operators.includes(lastChar)) {
+        const withoutLastChar = str.slice(0, -1);
+        setStr(withoutLastChar + value);
+        return;
+      }
     }
 
     setStr(str + value);
