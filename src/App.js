@@ -10,6 +10,16 @@ function App() {
       setStr("");
       return;
     }
+    if (value === "C") {
+      const afterDelete = str.slice(0, -1);
+      setStr(afterDelete);
+      return;
+    }
+    if (value === "=") {
+      const total = eval(str);
+      return setStr(total);
+    }
+
     setStr(str + value);
   };
   // console.log(str);
