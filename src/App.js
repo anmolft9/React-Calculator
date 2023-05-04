@@ -6,6 +6,7 @@ const operators = ["+", "-", "*", "/"];
 
 function App() {
   const [str, setStr] = useState("");
+  const [lastOperator, setLastOperator] = useState("");
 
   const handleOnClick = (value) => {
     if (value === "AC") {
@@ -23,11 +24,26 @@ function App() {
     }
 
     if (operators.includes(value)) {
+      setLastOperator(value);
       const lastChar = str.slice(-1);
       if (operators.includes(lastChar)) {
         const withoutLastChar = str.slice(0, -1);
         setStr(withoutLastChar + value);
         return;
+      }
+    }
+
+    if (value === ".") {
+      if (lastOperator) {
+        const operatorPosition = str.lastIndexOf(lastOperator);
+        const numberAfter = str.slice(operatorPosition + 1);
+        if (numberAfter.includes(".")) {
+          return;
+        }
+      } else {
+        if (str.includes(".")) {
+          return;
+        }
       }
     }
 
